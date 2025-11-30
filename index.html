@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      text-align: center;
+      background: url('wedding_pic.jpg') no-repeat center center/cover;
+      background-size: cover;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    /* Floating soft particles */
+    .particles::before,
+    .particles::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background-image: radial-gradient(rgba(255, 215, 0, 0.15) 2px, transparent 2px);
+      background-size: 80px 80px;
+      animation: float 18s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .particles::after {
+      animation-duration: 28s;
+      opacity: 0.5;
+    }
+
+    @keyframes float {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-200px, -200px); }
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.68);
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin: 10px 0;
+      color: #ffd700;
+      animation: glowFade 2s ease-in-out;
+    }
+
+    @keyframes glowFade {
+      0% { opacity: 0; text-shadow: 0px 0px 20px #ffd700; }
+      100% { opacity: 1; text-shadow: 0px 0px 8px #e6c75f; }
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin: 20px 0;
+      font-weight: 400;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #ffeec7;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .inviting-text {
+      font-size: 1.25rem;
+      margin: 20px auto;
+      max-width: 750px;
+      line-height: 1.7;
+      color: #f3f3f3;
+      animation: softZoom 2s ease-in-out;
+    }
+
+    @keyframes softZoom {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .details {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 20px;
+      border-radius: 18px;
+      margin: 20px auto;
+      max-width: 600px;
+      backdrop-filter: blur(3px);
+      animation: fadeInUp 2.5s ease-in-out;
+    }
+
+    .families {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px auto;
+      max-width: 800px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(3px);
+      animation: fadeInUp 2.5s ease-in-out;
+    }
+
+    .card h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.9rem;
+      color: #ffd700;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
+      animation: fadeIn 2.8s ease-in-out;
+    }
+
+    footer {
+      font-size: 1rem;
+      margin-top: 40px;
+      color: #e0e0e0;
+      animation: fadeIn 3.5s ease-in-out;
+    }
+
+    /* Smooth animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 1.3rem; }
+      .inviting-text { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+
+<body class="particles">
+
+  <div class="overlay">
+
+    <!-- Arabic Nikah Quote -->
+    <p class="quote">"وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً"</p>
+    <p class="quote">(Surah Ar-Rum 30:21)</p>
+
+    <!-- Inviting Text -->
+    <p class="inviting-text">
+      With joy in our hearts and blessings from the Almighty,  
+      we warmly invite you to join us in celebrating  
+      the sacred bond of love and togetherness.
+    </p>
+
+    <!-- Groom & Bride Names -->
+    <h1>Muhammed Shuhaib</h1>
+    <h2>&</h2>
+    <h1>Rana Jasmine</h1>
+
+    <!-- Wedding Details Box -->
+    <div class="details">
+      <h2>are getting married on <b>29th December, Monday</b></h2>
+      <p>Reception from <b>4:00 PM to 8:00 PM</b></p>
+      <p>Venue: <b>Kaipuram Auditorium</b></p>
+    </div>
+
+    <!-- Family Cards -->
+    <div class="families">
+      <div class="card">
+        <h3>Groom</h3>
+        <p><b>Muhammed Shuhaib</b></p>
+        <p>S/o Ummer & Sajitha</p>
+        <p>Palathingal House, Kaippuram</p>
+      </div>
+
+      <div class="card">
+        <h3>Bride</h3>
+        <p><b>Rana Jasmine</b></p>
+        <p>D/o Mahboob Jan & Zainaba</p>
+        <p>Kallivalappil House, Mezhathur</p>
+      </div>
+    </div>
+
+    <!-- Location Map -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62692.86855618857!2d76.10893325517578!3d10.864445146549786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c9b575165ae7%3A0x80bb3a72c3e8aa9d!2sKAIPURAM%20AUDITORIUM%2C%20PALAKKAD%20DISTRICT!5e0!3m2!1sen!2sin!4v1719249901295!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+
+    <footer>
+      With Love & Warm Regards, Families of Shuhaib & Jasmine
+    </footer>
+
+  </div>
+
+</body>
+</html>

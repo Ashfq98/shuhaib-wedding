@@ -162,10 +162,58 @@
       h2 { font-size: 1.3rem; }
       .inviting-text { font-size: 1.1rem; }
     }
+
+    /* ✨ Small Falling Stars (Golden) */
+    .star {
+      position: fixed;
+      top: -10px;
+      width: 10px;          /* smaller size */
+      height: 10px;
+      background: transparent;
+      clip-path: polygon(
+          50% 0%, 
+          61% 35%, 
+          98% 35%, 
+          68% 57%, 
+          79% 91%, 
+          50% 70%, 
+          21% 91%, 
+          32% 57%, 
+          2% 35%, 
+          39% 35%
+      );                    /* star shape */
+      background: rgba(255, 215, 0, 0.9); /* golden */
+      opacity: 0.9;
+      animation: starFall linear infinite;
+      z-index: 2;
+      filter: drop-shadow(0 0 3px gold); /* soft glow */
+    }
+
+    @keyframes starFall {
+      0%   { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(180deg); opacity: 0; }
+    }
+
   </style>
 </head>
 
 <body class="particles">
+
+  <!-- Petal Elements -->
+  <script>
+    // ⭐ Create Falling Golden Stars
+    for (let i = 0; i < 20; i++) {
+      let star = document.createElement("div");
+      star.classList.add("star");
+
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.animationDuration = 4 + Math.random() * 5 + "s";
+      star.style.opacity = 0.6 + Math.random() * 0.4;
+
+      document.body.appendChild(star);
+    }
+
+  </script>
 
   <div class="overlay">
 
@@ -183,7 +231,7 @@
     <!-- Groom & Bride Names -->
     <h1>Muhammed Shuhaib</h1>
     <h2>&</h2>
-    <h1>Rana Jasmine</h1>
+    <h1>Rana Jasmin</h1>
 
     <!-- Wedding Details Box -->
     <div class="details">
@@ -198,14 +246,14 @@
         <h3>Groom</h3>
         <p><b>Muhammed Shuhaib</b></p>
         <p>S/o Ummer & Sajitha</p>
-        <p>Palathingal House, Kaippuram</p>
+        <p>Palathingal House, Kaippuram, Thiruvegappura</p>
       </div>
 
       <div class="card">
         <h3>Bride</h3>
-        <p><b>Rana Jasmine</b></p>
+        <p><b>Rana Jasmin</b></p>
         <p>D/o Mahboob Jan & Zainaba</p>
-        <p>Kallivalappil House, Mezhathur</p>
+        <p>Kallivalappil House, Mezhathur, Thrithala</p>
       </div>
     </div>
 
@@ -213,7 +261,7 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62692.86855618857!2d76.10893325517578!3d10.864445146549786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c9b575165ae7%3A0x80bb3a72c3e8aa9d!2sKAIPURAM%20AUDITORIUM%2C%20PALAKKAD%20DISTRICT!5e0!3m2!1sen!2sin!4v1719249901295!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
 
     <footer>
-      With Love & Warm Regards, Families of Shuhaib & Jasmine
+      With love & warm regards, family and friends
     </footer>
 
   </div>
